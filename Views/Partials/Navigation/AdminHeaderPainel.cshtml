@@ -1,15 +1,13 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage
 @{
-      var userName = System.Web.HttpContext.Current.User.Identity.Name;
+    var userName = System.Web.HttpContext.Current.User.Identity.Name;
+    string memberAvatar = string.Empty;
     if (userName != null)
     {
-        
-          var umbracoUser = Services.UserService.GetByUsername(userName);
+
+        var memberUser = Services.MemberService.GetByUsername(userName);
+        memberAvatar = memberUser.GetValue<string>("avatarProfile");
     }
-   
-    
-        
-   
 }
 <header id="header" class="header">
     <div class="top-left">
@@ -97,7 +95,7 @@
 
             <div class="user-area dropdown float-right">
                 <a href="#" class="dropdown-toggle active" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <img class="user-avatar rounded-circle" src="images/admin.jpg" alt="User Avatar">
+                    <img class="user-avatar rounded-circle" src="@memberAvatar" alt="User Avatar">
                 </a>
 
                 <div class="user-menu dropdown-menu">
