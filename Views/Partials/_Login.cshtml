@@ -1,0 +1,53 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<UmbracoToReplication.Models.LoginModel>
+@using Umbraco.Web
+
+@if (!Umbraco.MemberIsLoggedOn())
+{
+    using (Html.BeginUmbracoForm("SubmitLogin", "Login", System.Web.Mvc.FormMethod.Post, new { id = "login" }))
+    {
+
+        @Html.AntiForgeryToken()
+        <div class="form-group">
+            @Html.LabelFor(m => m.Username)
+            @Html.TextBoxFor(m => m.Username, new { placeholder = "Username", @class = "form-control" })
+
+        </div>
+        <div class="form-group">
+
+            @Html.LabelFor(m => m.Password)
+            @Html.PasswordFor(m => m.Password, new { placeholder = "Password", @class = "form-control" })
+        </div>
+        <button name="login" class="btn btn-success btn-flat m-b-30 m-t-30" type="submit">Sign in</button>
+        @Html.ValidationSummary()
+        <div class="checkbox">
+            <label>
+                <input type="checkbox"> Remember Me
+            </label>
+            <label class="pull-right">
+                <a href="#">Forgotten Password?</a>
+            </label>
+
+        </div>
+
+        <div class="social-login-content">
+            <div class="social-button">
+                <button type="button" class="btn social facebook btn-flat btn-addon mb-3"><i class="ti-facebook"></i>Sign in with facebook</button>
+                <button type="button" class="btn social twitter btn-flat btn-addon mt-2"><i class="ti-twitter"></i>Sign in with twitter</button>
+            </div>
+        </div>
+        <div class="register-link m-t-15 text-center">
+            <p>Don't have account ? <a href="#"> Sign Up Here</a></p>
+        </div>
+
+
+
+
+
+
+
+    }
+}
+else
+{
+    Html.RenderAction("RenderLogout", "Member");
+}
