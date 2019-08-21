@@ -2,12 +2,14 @@
 @{
     var userName = System.Web.HttpContext.Current.User.Identity.Name;
     string memberAvatar = string.Empty;
-    if (userName != null)
+    if (!string.IsNullOrEmpty(userName))
     {
 
         var memberUser = Services.MemberService.GetByUsername(userName);
-        memberAvatar = memberUser.GetValue<string>("avatarProfile");
+        memberAvatar = memberUser?.GetValue<string>("avatarProfile")==null?string.Empty:memberUser?.GetValue<string>("avatarProfile");
         
+
+
     }
 }
 <header id="header" class="header">
@@ -96,7 +98,7 @@
 
             <div class="user-area dropdown float-right">
                 <a href="#" class="dropdown-toggle active" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <img class="user-avatar rounded-circle" src="@Umbraco.Media(memberAvatar).Url" alt="User Avatar">
+                    <img class="user-avatar rounded-circle" src="@Umbraco.Media(memberAvatar)?.Url" alt="User Avatar">
                 </a>
 
                 <div class="user-menu dropdown-menu">
