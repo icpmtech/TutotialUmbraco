@@ -2809,6 +2809,7 @@
     <Content Include="Views\adminMaster.cshtml" />
     <Content Include="Views\Login.cshtml" />
     <Content Include="Views\Partials\_Logout.cshtml" />
+    <Content Include="Views\Register.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
