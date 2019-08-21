@@ -278,6 +278,7 @@ Umbraco.Web.Cache.PublicAccessCacheRefresher, Umbraco.Web, Version=8.0.0.0, Cult
 Umbraco.Web.Cache.TemplateCacheRefresher, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Cache.UserCacheRefresher, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 UmbracoToReplication.Controllers.LoginController, UmbracoToReplication, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+UmbracoToReplication.Controllers.MemberController, UmbracoToReplication, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 
 Umbraco.Core.Composing.IComposer
 
@@ -347,6 +348,7 @@ Umbraco.Web.Controllers.UmbLoginStatusController, Umbraco.Web, Version=8.0.0.0, 
 Umbraco.Web.Controllers.UmbRegisterController, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Controllers.UmbLoginController, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 UmbracoToReplication.Controllers.LoginController, UmbracoToReplication, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+UmbracoToReplication.Controllers.MemberController, UmbracoToReplication, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 
 Umbraco.Web.Mvc.IRenderMvcController
 
@@ -431,6 +433,7 @@ Umbraco.Web.Controllers.UmbLoginStatusController, Umbraco.Web, Version=8.0.0.0, 
 Umbraco.Web.Controllers.UmbRegisterController, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Controllers.UmbLoginController, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 UmbracoToReplication.Controllers.LoginController, UmbracoToReplication, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+UmbracoToReplication.Controllers.MemberController, UmbracoToReplication, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 
 Umbraco.Core.Dashboards.IDashboard
 
